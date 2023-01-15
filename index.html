@@ -1,0 +1,49 @@
+<!-- 대부분의 웹 서버가 default로 index(첫번째).html을 찾아보도록 설정되어있다. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Welcome to KokoaTalk</title>
+  </head>
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>110%</span>
+        <i class="fas fa-battery-full fa-lg"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Kakao Clone</h1>
+      <p class="welcome-header__text">
+        If you have a Kakao Account, log in with your email or phone number.
+      </p>
+    </header>
+    <!-- action: 어떤 페이지로 data를 보낼건지 지정할 수 있다. -->
+    <!-- GET: 보안에 취약하다. username, password를 get방식으로 보내면 안된다.
+         url에 포함되어도 상관없는 정보들을 get방식으로 보낸다. -->
+    <!-- POST: 백엔드 서버에 정보를 전송하는 방식 -->
+    <form action="friends.html" method="get" id="login-form">
+      <input name="username" type="text" placeholder="Email or phone number" />
+      <input ame="password" type="password" placeholder="Password" />
+      <input type="submit" value="Log in" />
+      <input type="submit" value="Sing Up" />
+      <a href="#">Find Kakao Account or password</a>
+    </form>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

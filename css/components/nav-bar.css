@@ -1,0 +1,49 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  /* box-sizing: border-box;
+  - css box padding은 200px width 사이즈에 50px 패딩을 주면, 
+  css는 기존 박스의 width를 유지하기 위해 50px만큼 박스를 늘린다.
+  -> padding을 값을 주더라도 box 사이즈를 늘리지 않는다. */
+  box-sizing: border-box;
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  /* span이기 때문에 block적용 안하면 height적용 안됨 */
+  /* display: block; */
+  /* 사각형 width의 반 값을 쓰면 원이 됨 */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  /* 가장 가까운 relative 부모(div)를 기준으로 이동시켜준다. */
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+.nav__dot {
+  background-color: tomato;
+  width: 9px;
+  height: 9px;
+  border-radius: 4.5px;
+  display: flex;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
